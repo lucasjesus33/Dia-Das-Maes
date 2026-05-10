@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feliz Dia das Mães</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #ffb6c1, #fff0f5);
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        height:100vh;
+        overflow:hidden;
+    }
+
+    /* ROSAS CAINDO */
+    .rosa{
+        position:absolute;
+        top:-50px;
+        font-size:35px;
+        animation:cair linear infinite;
+        z-index:1;
+    }
+
+    @keyframes cair{
+        0%{
+            transform:translateY(-100px) rotate(0deg);
+            opacity:1;
+        }
+
+        100%{
+            transform:translateY(120vh) rotate(360deg);
+            opacity:0.8;
+        }
+    }
+
+    .cartao{
+        background:white;
+        width:350px;
+        padding:30px;
+        border-radius:20px;
+        text-align:center;
+        box-shadow:0 0 20px rgba(0,0,0,0.2);
+        animation: aparecer 1.5s ease;
+        position:relative;
+        z-index:2;
+    }
+
+    h1{
+        color:#e91e63;
+        font-size:32px;
+    }
+
+    p{
+        color:#555;
+        font-size:18px;
+        margin-top:20px;
+    }
+
+    .coracao{
+        font-size:60px;
+        animation: bater 1s infinite;
+    }
+
+    button{
+        margin-top:25px;
+        padding:12px 20px;
+        border:none;
+        border-radius:10px;
+        background:#e91e63;
+        color:white;
+        font-size:16px;
+        cursor:pointer;
+        transition:0.3s;
+    }
+
+    button:hover{
+        background:#c2185b;
+        transform:scale(1.05);
+    }
+
+    @keyframes bater{
+        0%{transform:scale(1);}
+        50%{transform:scale(1.2);}
+        100%{transform:scale(1);}
+    }
+
+    @keyframes aparecer{
+        from{
+            opacity:0;
+            transform:translateY(50px);
+        }
+        to{
+            opacity:1;
+            transform:translateY(0);
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ROSAS -->
+<div class="rosa" style="left:5%; animation-duration:8s;">🌹</div>
+<div class="rosa" style="left:15%; animation-duration:10s;">🌹</div>
+<div class="rosa" style="left:25%; animation-duration:7s;">🌹</div>
+<div class="rosa" style="left:35%; animation-duration:9s;">🌹</div>
+<div class="rosa" style="left:45%; animation-duration:11s;">🌹</div>
+<div class="rosa" style="left:55%; animation-duration:8s;">🌹</div>
+<div class="rosa" style="left:65%; animation-duration:10s;">🌹</div>
+<div class="rosa" style="left:75%; animation-duration:7s;">🌹</div>
+<div class="rosa" style="left:85%; animation-duration:9s;">🌹</div>
+<div class="rosa" style="left:95%; animation-duration:11s;">🌹</div>
+
+<div class="cartao">
+    <div class="coracao">💖</div>
+
+    <h1>Feliz Dia das Mães!</h1>
+
+    <p>
+        Mãe, obrigado por tudo que a senhora fez por mim, por cada abraço, conselho,
+        oração e por todo amor que você me dá todos os dias. 🌷<br>
+        OBSS: Se a senhora tivesse escolido o presente (como uma jóia, moto, celular) eu iria dar, mas a senhora não quis. &#128532;
+    </p>
+
+    <button onclick="mostrarMensagem()">
+        Clique aqui 🌸
+    </button>
+</div>
+
+<script>
+    function mostrarMensagem(){
+        alert("Eu te amo mãe! ❤️ Feliz Dia das Mães! ❤️ (eu ainda vou te dar um presente 😎)");
+    }
+</script>
+
+</body>
+</html>
